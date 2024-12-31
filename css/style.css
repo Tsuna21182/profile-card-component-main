@@ -1,0 +1,130 @@
+:root {
+  --Dark-cyan: hsl(185, 75%, 39%);
+  --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --Dark-gray: hsl(0, 0%, 59%);
+
+  --fuente-principal: "Kumbh Sans", serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-color: var(--Dark-cyan);
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 120%, 180%;
+  background-position: -25rem -15rem, 17rem 45rem;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 50%, 70%;
+    background-position: 2rem -50rem, 84rem 50rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  width: 90%;
+}
+
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/*card*/
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.card__pattern {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 15rem;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.img__card {
+  position: absolute;
+  top: 10rem;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.card__contenido {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.card__heading {
+  margin-bottom: 0;
+
+  span {
+    color: var(--Dark-gray);
+  }
+}
+
+.card__text {
+  color: var(--Dark-gray);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* tabla */
+
+.table {
+  margin-top: 5rem;
+  border-top: 1px solid var(--Dark-gray);
+}
+
+tbody {
+  display: flex;
+  gap: 4rem;
+  margin: 2rem;
+}
+
+tr {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+td {
+  color: var(--Dark-gray);
+  font-size: 1.2rem;
+}
+
+/* media queries */
+
+@media (min-width: 1440px) {
+  [class*="contenedor"] {
+    width: 18%;
+  }
+}
